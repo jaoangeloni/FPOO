@@ -1,13 +1,17 @@
-#include<stdio.h>
-#include<stdlib.h>
-            
-int decimal(){
-	int dec[6],bin[6],i;
-	
-	for(i = 0; i < 6; i++){
-		dec[i]%2 = bin[i];
-		dec[i]/2 = dec[i];
-	}
-	
-	printf("%d",bin[i]);
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int calc(int dec, int bin);
+
+int main(int argc, char *argv[]) {
+	printf("%d", calc(23,0));
+	return 0;
 }
+
+int calc(int dec, int bin){
+	dec%2 = bin;
+	dec = dec/2;
+	return bin;	
+}
+
