@@ -1,0 +1,93 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header
+{
+    background-color: rgb(163, 253, 223);
+    width: auto;
+    height: auto;
+    margin: 30px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header div
+{
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+header div img
+{
+    width: 100px;
+}
+
+
+
+main
+{
+    height: 70vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#class
+{
+    width: 50%;
+    height: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 20px;
+}
+#tabela1
+{
+    width: 70%;
+    justify-content: space-between;
+    display: flex;
+    padding: 30px;
+    background-color: gainsboro;
+}
+#tabela1 p
+{
+    margin-top: 10px;
+}
+#tabela2
+{
+    width: 70%;
+    justify-content: space-between;
+    display: flex;
+    padding: 30px;
+    background-color: gainsboro;
+}
+#tabela2 p
+{
+    margin-top: 10px;
+}
+
+#galeria
+{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 20px;
+}
+#galeria img
+{
+    width: 200px;
+    margin: 20px;
+}

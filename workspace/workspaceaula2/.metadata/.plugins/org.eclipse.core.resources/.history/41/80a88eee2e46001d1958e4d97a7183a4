@@ -1,0 +1,6 @@
+
+public class Venda {
+	String produto;
+	float preco;
+	int quantidade;
+}

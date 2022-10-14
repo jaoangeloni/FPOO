@@ -1,0 +1,9 @@
+package padrao;
+
+public class Venda {
+	String produto;
+	float preco;
+	int quantidade;
+	
+	void subtotal();
+}

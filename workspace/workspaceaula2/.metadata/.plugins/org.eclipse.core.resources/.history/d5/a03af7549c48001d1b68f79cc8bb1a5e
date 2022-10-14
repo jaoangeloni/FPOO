@@ -1,0 +1,17 @@
+package notas01;
+
+public class Boletim {
+
+	String aluno;
+	float portugues;
+	float matematica;
+	float ciencias;
+	
+	float media() {
+		return (portugues + matematica + ciencias) / 3;
+	}
+	public String toString() {
+		return String.format("%s\t%.2f\t%.2f\t%.2f\t%.2f\n",aluno,portugues,matematica,ciencias,media());
+	}
+}
+

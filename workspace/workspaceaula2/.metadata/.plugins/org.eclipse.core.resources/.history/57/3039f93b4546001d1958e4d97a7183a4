@@ -1,0 +1,13 @@
+package vendas02;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Venda vendas[] = new Vendas[10];
+		
+		venda[0].produto = "Camiseta";
+		venda[0].preço = 19.9f;
+		venda[0].quantidade
+	}
+
+}

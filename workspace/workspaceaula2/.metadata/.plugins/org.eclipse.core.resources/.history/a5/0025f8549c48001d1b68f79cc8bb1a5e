@@ -1,0 +1,38 @@
+package notas01;
+
+public class Main {
+	
+
+	public static void main(String[] args) {
+		Boletim boletim[] = new Boletim[4];
+		
+		boletim[0] = new Boletim();
+		boletim[0].aluno = "Jair";
+		boletim[0].portugues = 10;
+		boletim[0].matematica = 5;
+		boletim[0].ciencias = 10;
+		
+		boletim[1] = new Boletim();
+		boletim[1].aluno = "José";
+		boletim[1].portugues = 8;
+		boletim[1].matematica = 7;
+		boletim[1].ciencias = 3;
+		
+		boletim[2] = new Boletim();
+		boletim[2].aluno = "Humberto";
+		boletim[2].portugues = 6;
+		boletim[2].matematica = 5.5f;
+		boletim[2].ciencias = 7;
+		
+		boletim[3] = new Boletim();
+		boletim[3].aluno = "Zeroberto";
+		boletim[3].portugues = 8.8f;
+		boletim[3].matematica = 10;
+		boletim[3].ciencias = 10;
+		
+		for(int i=0; i<4 ; i++) {
+			System.out.println(boletim[i].toString());
+		}
+	}
+
+}

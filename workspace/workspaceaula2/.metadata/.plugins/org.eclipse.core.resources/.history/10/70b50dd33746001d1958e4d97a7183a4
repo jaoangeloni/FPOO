@@ -1,0 +1,14 @@
+package padrao;
+
+public class Main {
+	
+	Venda v1,v2,v3,v4;//Instâncias
+
+	public static void main(String[] args) {
+		System.out.println("Vendas");
+		System.out.println("[Produto][Preço][Qtd][Subtotal]");
+		System.out.printf("[%s][%.2f][%d][%.2f]\n", v1.produto,v1.preco,v1.quantidade,v1.subtotal());
+		System.out.printf("[%s][%.2f][%d][%.2f]\n", v2.produto,v2.preco,v2.quantidade,v2.subtotal());
+	}
+
+}

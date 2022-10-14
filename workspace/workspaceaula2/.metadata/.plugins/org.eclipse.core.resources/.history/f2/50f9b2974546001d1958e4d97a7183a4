@@ -1,0 +1,22 @@
+package vendas02;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Venda vendas[] = new Venda[10];
+		
+		vendas[0].produto = "Camiseta";
+		vendas[0].preco = 19.9f;
+		vendas[0].quantidade = 1;
+		
+		vendas[1].produto = "Bermuda";
+		vendas[1].preco = 39.9f;
+		vendas[1].quantidade = 2;
+		
+		for(int = 0; i < 2; i++) {
+			System.out.println("%s\t%.2f\t%d\t%.2f\n", vendas[i].produto, vendas[i].preco, vendas[i].quantidade);
+		}
+		
+	}
+
+}
