@@ -1,0 +1,32 @@
+package programa;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args){
+		Locale.setDefault(new Locale("pt","BR"));
+		Paciente pacientes[] = new Paciente[10];
+		Scanner scan = new Scanner(System.in);
+		float totImc = 0, totPeso = 0, totAlt = 0;
+		
+		System.out.printf("Digite o nome,peso e altura de 10 pacientes:\n");
+		for(int i = 0; i < 10; i++){
+			pacientes[i] = new Paciente(scan.next(),scan.nextFloat() ,scan.nextFloat());
+		}
+		System.out.println("Paciente\tPeso\tAltura\tIMC\tDiagnóstico:\n");
+		for(int i = 0; i < 10; i++){
+			System.out.println(pacientes[i].toString());
+			totImc += pacientes[i].imc();
+			totPeso += pacientes[i].peso;
+			totAlt += pacientes[i].altura;
+		}
+		float mediaImc = totImc/10f;
+		float mediaPeso = totPeso/10f;
+		float mediaAlt = totAlt/10f;
+
+		System.out.printf("Médias\nPeso[%.2f]\nAltura[%.2f]\nIMC[%.2f]",mediaPeso,mediaAlt,mediaImc);
+	}
+
+}
