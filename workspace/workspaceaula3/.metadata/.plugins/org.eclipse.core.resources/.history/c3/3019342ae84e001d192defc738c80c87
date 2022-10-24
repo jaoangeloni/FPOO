@@ -1,0 +1,18 @@
+package padrao;
+
+public class Venda {
+	String produto;
+	int quantidade;
+	float preco;
+	
+	Venda(){}
+	Venda(String n, int q, float p){
+		n = produto;
+		q = quantidade;
+		p = preco;
+		
+	}
+	public float subtotal(){
+		return quantidade * preco;
+	}
+}

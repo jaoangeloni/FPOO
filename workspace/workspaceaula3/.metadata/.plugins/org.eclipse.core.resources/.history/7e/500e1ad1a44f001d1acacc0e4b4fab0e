@@ -1,0 +1,26 @@
+package padrao;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Operacao produtos[] = new Operacao[10];
+		float totalf = 0,totali = 0;
+		
+		System.out.println("Digite 10 produtos, quantidade comprada, quandidade vendida, preco de compra e preco de venda:");
+		for(int i = 0; i < 10; i++)
+			produtos[i] = new Operacao(scan.next(), scan.nextInt(), scan.nextInt(), scan.nextFloat(), scan.nextFloat());
+		
+		System.out.println("\nProduto\t\tQtd.Compra\tQtd.Venda\tPrecoCompra\tPrecoVenda\tInvestimento\tFaturamento\tLucro(R$)\tLucro(%)");
+		for(int i = 0; i < 10; i++) {
+			System.out.println(produtos[i].toString());
+			totalf = totalf + produtos[i].faturamento();
+			totali = totali + produtos[i].investimento();
+		}
+		System.out.printf("\nTotalinvestimento\t[R$%.2f]", totali);
+		System.out.printf("\nTotalFaturamento\t[R$%.2f]", totalf);
+	}
+
+}
