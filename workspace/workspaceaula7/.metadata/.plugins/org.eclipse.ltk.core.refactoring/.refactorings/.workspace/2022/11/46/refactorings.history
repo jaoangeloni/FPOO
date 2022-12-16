@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;IRSS&apos; to &apos;IRRF&apos;" description="Rename resource &apos;IRSS&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/IRSS" name="IRRF" stamp="1668081037887" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;fgts&apos; to &apos;FGTS&apos;" description="Rename resource &apos;fgts&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/fgts" name="FGTS" stamp="1668081078804" updateReferences="true"/>
+</session>

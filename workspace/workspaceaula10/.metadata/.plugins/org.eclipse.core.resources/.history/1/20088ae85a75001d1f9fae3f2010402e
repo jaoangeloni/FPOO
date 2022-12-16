@@ -1,0 +1,57 @@
+package paciente;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+	public class Main extends JFrame implements ActionListener{
+		JPanel painel;
+		JLabel rotuloNome, rotuloPeso, rotuloAltura, rotuloResultado;
+		JTextField campoNome, campoPeso, campoAltura, campoResultado;
+		JButton calcular, limpar;
+		JTextArea areaResultado;
+	
+		Main(){
+			setTitle("Avaliação de saúde");
+			setBounds(50, 50, 755, 600);
+			setDefaultCloseOperation(EXIT_ON_CLOSE);
+			painel = new JPanel();
+			setContentPane(painel);
+			setLayout(null);
+			
+			rotuloNome = new JLabel("Nome:");
+			rotuloNome.setBounds(20, 20, 200, 30);
+			painel.add(rotuloNome);
+
+			rotuloPeso = new JLabel("Idade:");
+			rotuloPeso.setBounds(20, 50, 200, 30);
+			painel.add(rotuloPeso);
+			
+			rotuloAltura = new JLabel("Idade:");
+			rotuloAltura.setBounds(20, 50, 200, 30);
+			painel.add(rotuloAltura);
+			
+			rotuloResultado = new JLabel("Resultado:");
+			rotuloResultado.setBounds(20, 80, 200, 30);
+			painel.add(rotuloResultado);
+			
+			
+		}
+	public static void main(String[] args) {
+		System.out.println("Teste");
+		new Main().setVisible(true);
+		
+	}
+
+
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package ex1;
+
+import javax.swing.JOptionPane;
+
+public class Formulário {
+
+	public static void main(String[] args) {
+			System.out.println("teste");
+			String texto = "Jao";
+			JOptionPane.showMessageDialog(null, texto);
+	}
+
+}

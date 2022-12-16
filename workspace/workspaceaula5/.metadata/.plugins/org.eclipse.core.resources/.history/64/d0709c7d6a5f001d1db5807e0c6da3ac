@@ -1,0 +1,118 @@
+package aplicacoes;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Date;
+
+public class Main {
+	static Scanner scan = new Scanner(System.in);
+	static ArrayList<Vacina> vacinas = new ArrayList<>();
+	static int menu = 0;
+
+	public static void main(String[] args) {
+		while (menu != 8) {
+			System.out.println("\n1.Cadastrar vacinas");
+			System.out.println("2.Listar vacinas");
+			System.out.println("3.Alterar dados");
+			System.out.println("4.Excluir registro");
+			System.out.println("5.Buscar por pet");
+			System.out.println("6.Buscar por veterinário");
+			System.out.println("7.Buscar por vacina");
+			System.out.println("8.Terminar programa");
+			menu = scan.nextInt();
+
+			switch (menu) {
+			case 1:	
+				System.out.println("Digite quantas vacinas deseja cadastrar");
+				int n = scan.nextInt();
+				System.out.println("Pet\tVet\tVacina\tData");
+				for(int i = 0; i < n; i++) {
+					create();
+				}
+				break;
+			case 2:
+				System.out.println("Pet\tVet\tVacina\tData");
+				read();
+				break;
+			case 3:
+				System.out.println("Digite qual item quer alterar");
+				update(scan.nextInt());
+				break;
+			case 4:
+				System.out.println("Digite qual item quer excluir");
+				delete(scan.nextInt());
+				break;
+			case 5:
+				System.out.println("Buscar por pet");
+				buscaPet();
+				break;
+			case 6:
+				System.out.println("Buscar por vet");
+				buscaVet();
+				break;
+			case 7:
+				System.out.println("Buscar por vacina");
+				buscaVac();
+				break;
+			case 8:
+				System.out.println("Obrigado por utilizar nosso sistema. Tchau.");
+				break;
+			default:
+				System.out.println("Opção inválida.");
+				break;
+			}
+		}
+
+	}
+
+	public static void create() {
+			Vacina v = new Vacina();
+			v.setNomePet(scan.next());
+			v.setVeterinario(scan.next());
+			v.setNomeVacina(scan.next());
+			v.setData(scan.next());
+			vacinas.add(v);
+	}
+
+	public static void read() {
+		for (Vacina v : vacinas) {
+			System.out.println(v.toString());
+		}
+	}
+
+	public static void update(int indice) {
+		if (indice >= 0 && indice < vacinas.size()) {
+			vacinas.remove(indice);
+			Vacina v = new Vacina();
+			v.setNomePet(scan.next());
+			v.setVeterinario(scan.next());
+			v.setNomeVacina(scan.next());
+			v.setData(scan.next());
+			vacinas.add(v);
+			System.out.println("Item alterado");
+		} else
+			System.out.println("Item inválido");
+	}
+
+	public static void delete(int indice) {
+		if (indice >= 0 && indice < vacinas.size()) {
+			vacinas.remove(indice);
+			System.out.println("Item excluído");
+		} else
+			System.out.println("Item inválido");
+	}
+
+	public static void buscaPet(){
+		String nome = scan.next();
+		for(int i = 0; i < vacinas.size(); i++)
+			if(nome.equals(vacinas.nomePet(i))) System.out.println(vacinasb(i).toString());
+			else System.out.println("Pet não encontrado.");
+	}
+	
+	public static void buscaVet(){
+
+	}
+	public static void buscaVac(){
+		
+	}
+}

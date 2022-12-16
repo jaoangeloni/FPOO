@@ -1,0 +1,82 @@
+package paciente;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+	public class Main extends JFrame implements ActionListener{
+		JPanel painel;
+		JLabel rotuloNome, rotuloPeso, rotuloAltura, rotuloResultado;
+		JTextField campoNome, campoPeso, campoAltura;
+		JButton calcular, limpar;
+		JTextArea areaResultado;
+	
+		Main(){
+			setTitle("Avaliação de saúde");
+			setBounds(50, 50, 755, 600);
+			setDefaultCloseOperation(EXIT_ON_CLOSE);
+			painel = new JPanel();
+			setContentPane(painel);
+			setLayout(null);
+			
+			rotuloNome = new JLabel("Nome:");
+			rotuloNome.setBounds(20, 20, 200, 30);
+			painel.add(rotuloNome);
+
+			rotuloPeso = new JLabel("Peso:");
+			rotuloPeso.setBounds(20, 50, 200, 30);
+			painel.add(rotuloPeso);
+			
+			rotuloAltura = new JLabel("Altura:");
+			rotuloAltura.setBounds(20, 80, 200, 30);
+			painel.add(rotuloAltura);
+			
+			rotuloResultado = new JLabel("Resultado:");
+			rotuloResultado.setBounds(20, 200, 200, 30);
+			painel.add(rotuloResultado);
+			
+			campoNome = new JTextField();
+			campoNome.setBounds(120, 20, 500, 30);
+			painel.add(campoNome);
+			
+			campoPeso = new JTextField();
+			campoPeso.setBounds(120, 50, 500, 30);
+			painel.add(campoPeso);
+			
+			campoAltura = new JTextField();
+			campoAltura.setBounds(120, 80, 500, 30);
+			painel.add(campoAltura);
+			
+			calcular = new JButton("Calcular");
+			calcular.setBounds(120, 110, 200, 30);
+			painel.add(calcular);
+			calcular.addActionListener(this);
+			
+			limpar = new JButton("Limpar");
+			limpar.setBounds(420, 110, 200, 30);
+			painel.add(limpar);
+			limpar.addActionListener(this);
+			
+			areaResultado = new JTextArea();
+			areaResultado.setBounds(20, 210, 700, 400);
+			painel.add(areaResultado);
+
+		}
+	public static void main(String[] args) {
+		System.out.println("Teste");
+		new Main().setVisible(true);
+		
+	}
+
+
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int numero;
+		String nome;
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Digite o número de seu candidato");
+		numero = scan.nextInt();
+		
+		if(numero == 13) nome = "lula";
+		else if(numero == 22) nome = "bolsonaro";
+		else if (numero == 0) nome = "branco";
+		else nome = "nulo";
+		
+		
+		String saida = String.format("%s;%d", nome, numero);
+		System.out.println(saida);
+	}
+
+}

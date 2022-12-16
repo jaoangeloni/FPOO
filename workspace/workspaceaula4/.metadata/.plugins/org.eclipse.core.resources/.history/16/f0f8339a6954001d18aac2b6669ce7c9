@@ -1,0 +1,26 @@
+package pesquisa;
+
+public class Pessoa {
+	String nome;
+	String sobrenome;
+	int idade;
+	
+	Pessoa() {
+	}
+
+	Pessoa(String n, String sn, int i) {
+		nome = n;
+		sobrenome = sn;
+		idade = i;
+	}
+	
+	public String faseDaVida(){
+		if(idade < 15)return "Criança";
+		else if(idade < 30)return "Jovem";
+		else if(idade < 60)return "Adulto";
+		else return "Idoso";
+	}
+	public String toString() {
+		return String.format("%s %s\t\t%d\t%s\n", nome, sobrenome, idade, faseDaVida());
+	}
+}

@@ -1,0 +1,8 @@
+package padrao;
+
+public class Veiculos {
+	String nome;
+	int ano;
+	float valor;
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ex1.Formulário&apos; to &apos;Mensagens&apos;&#x0D;&#x0A;- Original project: &apos;GUI&apos;&#x0D;&#x0A;- Original element: &apos;ex1.Formulário&apos;&#x0D;&#x0A;- Renamed element: &apos;ex1.Mensagens&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Formulário&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ex1{Formulário.java[Formulário" matchStrategy="1" name="Mensagens" qualified="false" references="true" similarDeclarations="false" stamp="1670240558371" textual="false" version="1.0"/>
+</session>

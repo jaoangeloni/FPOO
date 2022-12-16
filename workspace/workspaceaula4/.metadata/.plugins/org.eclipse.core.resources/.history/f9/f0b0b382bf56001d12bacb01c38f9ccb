@@ -1,0 +1,29 @@
+package pesquisa;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+public class Main {
+
+	public static void main(String[] args){
+		Scanner scan = new Scanner(System.in);
+		ArrayList<Pessoa> pessoas = new ArrayList<>();
+		int contcrianca = 0,contjovem = 0,contadulto = 0,contidoso = 0;
+
+		System.out.println("Digite quantas pessoas estão interessadas no curso:");
+		int n = scan.nextInt();
+		System.out.println("Digite nome, sobrenome e idade das pessoas que deseja cadastrar");
+		for(int i=0;i<n;i++) {
+			pessoas.add(new Pessoa(scan.next(),scan.next(),scan.nextInt()));
+			if (pessoas.get(i).faseDaVida() == "Criança")contcrianca++;
+			else if (pessoas.get(i).faseDaVida() == "Jovem")contjovem++;
+			else if (pessoas.get(i).faseDaVida() == "Adulto")contadulto++;
+			else if (pessoas.get(i).faseDaVida() == "Idoso")contidoso++;
+		}
+			System.out.println(pessoas.toString());
+		
+			System.out.println("Estatísticas");
+			System.out.printf("[Crianca]\t%d\n[Jovem]\t\t%d\n[Adulto]\t%d\n[Idoso]\t\t%d\n",contcrianca,contjovem,contadulto,contidoso);
+	}		
+}
